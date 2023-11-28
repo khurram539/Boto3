@@ -24,6 +24,6 @@ for event in response['Events']:
 
 
 
-In this code, we use the `lookup_events()` method of the CloudTrail client to search for events with the event name `'CreateBucket'`. The response will contain a list of events, and we iterate over each event to retrieve the bucket name and user identity from the event data.
+#In this code, we use the `lookup_events()` method of the CloudTrail client to search for events with the event name `'CreateBucket'`. The response will contain a list of events, and we iterate over each event to retrieve the bucket name and user identity from the event data.
 
-Please note that you need to have the necessary permissions to access CloudTrail and S3, and CloudTrail must be enabled and configured to capture the necessary events for this information to be available.
+#Please note that you need to have the necessary permissions to access CloudTrail and S3, and CloudTrail must be enabled and configured to capture the necessary events for this information to be available.
