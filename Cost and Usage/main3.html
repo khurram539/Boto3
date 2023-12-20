@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWS Costs</title>
+</head>
+<body>
+    <h1>AWS Costs</h1>
+    <table>
+        <tr>
+            <th>Service</th>
+            <th>Cost</th>
+        </tr>
+        {% for cost in costs %}
+        <tr>
+            <td>{{ cost.service }}</td>
+            <td>{{ cost.cost }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
