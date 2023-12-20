@@ -1,3 +1,4 @@
+from tabulate import tabulate
 import boto3
 
 # Create a Cost Explorer client
@@ -5,15 +6,15 @@ ce = boto3.client('ce', region_name='us-east-1')
 
 # Set the time period for the query
 time_period = {
-    'Start': '2023-10-01',
-    'End': '2023-10-30'
+    'Start': '2023-12-01',
+    'End': '2023-12-31'
 }
 
 # Set the granularity of the query to MONTHLY
 granularity = 'MONTHLY'
 
 # Set the metrics to retrieve
-metrics = ['UnblendedCost']
+metrics = ['BlendedCost']
 
 # Set the group by parameter to group by service
 group_by = [
@@ -31,8 +32,13 @@ response = ce.get_cost_and_usage(
     GroupBy=group_by
 )
 
-# Print the results
+# Create a list to store the results
+costs = []
+
+# Add the results to the list
 for result in response['ResultsByTime']:
     for group in result['Groups']:
-        print(f"Service: {group['Keys'][0]}")
-        print(f"Unblended cost: {group['Metrics']['UnblendedCost']['Amount']} {group['Metrics']['UnblendedCost']['Unit']}")
+        costs.append([group['Keys'][0], group['Metrics']['BlendedCost']['Amount']])
+
+# Tabulate the results
+print(tabulate(costs, headers=['Service', 'Cost'], tablefmt='pretty'))
