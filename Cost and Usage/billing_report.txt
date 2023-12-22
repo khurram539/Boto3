@@ -1,0 +1,154 @@
++----------------------------------------+---------------+
+|                Service                 |     Cost      |
++----------------------------------------+---------------+
+|          AWS Service Catalog           |       0       |
+|          AWS Systems Manager           |   0.000312    |
+|     Amazon Simple Storage Service      |   0.000005    |
+|            AmazonCloudWatch            |       0       |
+|          AWS Systems Manager           |   0.000078    |
+|            AmazonCloudWatch            |       0       |
+|             AWS CloudShell             |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |       0       |
+|          AWS Systems Manager           |    0.00663    |
+|              EC2 - Other               | 0.4984859603  |
+| Amazon Elastic Compute Cloud - Compute | 0.0755599864  |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      |  0.00077761   |
+|            AmazonCloudWatch            |       0       |
+|                  Tax                   |       0       |
+|             AWS CloudShell             |       0       |
+|             AWS CloudTrail             |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |   0.000075    |
+|          AWS Systems Manager           |   0.019266    |
+|              EC2 - Other               | 2.5793304863  |
+| Amazon Elastic Compute Cloud - Compute | 5.6115933521  |
+|   Amazon Relational Database Service   | 0.0033657273  |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0260195354  |
+|            AmazonCloudWatch            |       0       |
+|                  Tax                   |       0       |
+|             AWS CloudTrail             |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |    0.00014    |
+|          AWS Service Catalog           |       0       |
+|          AWS Systems Manager           |   0.006903    |
+|              EC2 - Other               | 3.5645891908  |
+| Amazon Elastic Compute Cloud - Compute | 0.2417102643  |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0288548988  |
+|            AmazonCloudWatch            |       0       |
+|                  Tax                   |       0       |
+|             AWS CloudTrail             |       0       |
+|                AWS Glue                |   0.0358842   |
+|       AWS Key Management Service       | 0.0611111112  |
+|               AWS Lambda               |       0       |
+|          AWS Secrets Manager           |    0.00013    |
+|          AWS Service Catalog           |       0       |
+|           AWS Step Functions           |       0       |
+|          AWS Systems Manager           |   0.008658    |
+|              EC2 - Other               | 0.5345007706  |
+| Amazon Elastic Compute Cloud - Compute | 0.1157955935  |
+|             Amazon Kinesis             | 0.0010472333  |
+|        Amazon Kinesis Firehose         |  0.00000484   |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 1.8946652259  |
+|            AmazonCloudWatch            |       0       |
+|                  Tax                   |       0       |
+|             AWS CloudShell             |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |    0.00014    |
+|          AWS Systems Manager           |   0.008658    |
+|              EC2 - Other               | 3.3450419308  |
+| Amazon Elastic Compute Cloud - Compute | 1.8244067099  |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0019180413  |
+|      Amazon Virtual Private Cloud      |       0       |
+|            AmazonCloudWatch            |       0       |
+|                  Tax                   |       0       |
+|                AWS Glue                |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |    0.00012    |
+|          AWS Systems Manager           |    0.00429    |
+|              EC2 - Other               | 2.6159839097  |
+| Amazon Elastic Compute Cloud - Compute | 0.3541329641  |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0019384206  |
+|      Amazon Virtual Private Cloud      |       0       |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000002    |
+|                  Tax                   |       0       |
+|             AWS CloudTrail             |       0       |
+|           AWS Cost Explorer            |     0.04      |
+|                AWS Glue                |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |   0.000115    |
+|          AWS Service Catalog           |       0       |
+|           AWS Step Functions           |       0       |
+|          AWS Systems Manager           |   0.007059    |
+|              EC2 - Other               | 11.4933236609 |
+| Amazon Elastic Compute Cloud - Compute | 4.5172630971  |
+|     Amazon Elastic Load Balancing      |    0.0225     |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0498563873  |
+|      Amazon Virtual Private Cloud      |       0       |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000016    |
+|                  Tax                   |       0       |
+|                AWS Glue                |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |   0.000095    |
+|          AWS Service Catalog           |       0       |
+|          AWS Systems Manager           |   0.000546    |
+|              EC2 - Other               | 5.6734857821  |
+| Amazon Elastic Compute Cloud - Compute |  5.603785378  |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0080149355  |
+|      Amazon Virtual Private Cloud      |       0       |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000005    |
+|                  Tax                   |       0       |
+|           AWS Cost Explorer            |     0.02      |
+|                AWS Glue                |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |    0.00011    |
+|          AWS Systems Manager           |   0.000078    |
+|              EC2 - Other               | 5.5144543539  |
+| Amazon Elastic Compute Cloud - Compute | 0.3323632585  |
+|     Amazon Elastic Load Balancing      |    2.7675     |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0079375129  |
+|      Amazon Virtual Private Cloud      |       0       |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000004    |
+|                  Tax                   |       0       |
+|             AWS CloudTrail             |       0       |
+|           AWS Cost Explorer            |     0.24      |
+|         AWS Directory Service          | 0.0052250417  |
+|                AWS Glue                |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |    0.00007    |
+|          AWS Systems Manager           |   0.000156    |
+|            Amazon DynamoDB             |       0       |
+|              EC2 - Other               | 7.6342720124  |
+| Amazon Elastic Compute Cloud - Compute | 2.9240184737  |
+| Amazon Managed Service for Prometheus  | 2.1792997776  |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0756089594  |
+|      Amazon Virtual Private Cloud      |       0       |
+|           Amazon WorkSpaces            |       0       |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000008    |
+|                  Tax                   |       0       |
++----------------------------------------+---------------+
