@@ -33,8 +33,7 @@ for reservation in response['Reservations']:
         else:
             operating_system = 'Unknown'
         
-        # Print the instance details
-        print(f"Operating System: {operating_system}")  # Print the operating system
+        # Print the instance details        
         print(f"AMI Name:  {ami_name}")
         print(f"AMI ID: {ami_id}")
         print(f"Instance ID: {instance_id}")
