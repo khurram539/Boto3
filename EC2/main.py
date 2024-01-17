@@ -43,5 +43,5 @@ for reservation in response['Reservations']:
         print(f"Subnet ID: {subnet_id}")
         print(f"Public IP: {public_ip}")
         print(f"Private IP: {private_ip}")        
-        print(f"AMI Name:  {ami_name}")  
+         
         
