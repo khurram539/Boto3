@@ -2,22 +2,19 @@
 |                Service                 |     Cost     |
 +----------------------------------------+--------------+
 |             AWS CloudTrail             |      0       |
-|           AWS Cost Explorer            |     0.31     |
-|         AWS Directory Service          | 0.0052250417 |
 |                AWS Glue                |      0       |
 |       AWS Key Management Service       |      0       |
-|          AWS Secrets Manager           |   0.000085   |
+|          AWS Secrets Manager           |   0.00005    |
 |          AWS Systems Manager           |   0.000156   |
 |            Amazon DynamoDB             |      0       |
-|              EC2 - Other               | 8.7949520575 |
-| Amazon Elastic Compute Cloud - Compute | 3.5798146358 |
-| Amazon Managed Service for Prometheus  | 6.5792997776 |
+|              EC2 - Other               | 6.2206089855 |
+| Amazon Elastic Compute Cloud - Compute | 0.9593065223 |
+| Amazon Managed Service for Prometheus  |    15.16     |
 |   Amazon Simple Notification Service   |      0       |
 |      Amazon Simple Queue Service       |      0       |
-|     Amazon Simple Storage Service      | 0.0947803289 |
+|     Amazon Simple Storage Service      | 0.0505862948 |
 |      Amazon Virtual Private Cloud      |      0       |
-|           Amazon WorkSpaces            |      0       |
 |            AmazonCloudWatch            |      0       |
-|           CloudWatch Events            |   0.000008   |
+|           CloudWatch Events            |   0.000002   |
 |                  Tax                   |      0       |
 +----------------------------------------+--------------+

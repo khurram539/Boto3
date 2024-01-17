@@ -6,8 +6,8 @@ ce = boto3.client('ce', region_name='us-east-1')
 
 # Set the time period for the query
 time_period = {
-    'Start': '2023-12-01',
-    'End': '2023-12-31'
+    'Start': '2024-01-01',
+    'End': '2024-01-31'
 }
 
 # Set the granularity of the query to MONTHLY
