@@ -34,14 +34,26 @@ for reservation in response['Reservations']:
             operating_system = 'Unknown'
         
         # Print the instance details        
-        print(f"AMI Name:  {ami_name}")
-        print(f"AMI ID: {ami_id}")
-        print(f"Instance ID: {instance_id}")
-        print(f"Instance Type: {instance_type}")
+        print(f"Instance name: {instance['Tags'][0]['Value']}")
+        print(f"Availability Zone: {instance['Placement']['AvailabilityZone']}")
         print(f"Instance State: {instance_state}")
-        print(f"VPC ID: {vpc_id}")
-        print(f"Subnet ID: {subnet_id}")
-        print(f"Public IP: {public_ip}")
-        print(f"Private IP: {private_ip}")        
+        print(f"Instance Type: {instance_type}")
+        print(f"Instance ID: {instance_id}") 
+        print(f"VPC ID: {vpc_id}")        
+        print(f"Subnet ID: {subnet_id}")        
+        print(f"Public IP: {public_ip}")        
+        print(f"Private IP: {private_ip}")
+        print(f"AMI Name:  {ami_name}")        
+        print(f"AMI ID: {ami_id}")
+        
+                
+        
+        
+        
+        
          
+        
+        
+        
+        
         
