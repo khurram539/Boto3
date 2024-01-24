@@ -46,7 +46,7 @@ for reservation in response['Reservations']:
         print(f"AMI Name:  {ami_name}")        
         print(f"AMI ID: {ami_id}")
         
-                
+             
         
         
         
