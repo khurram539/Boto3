@@ -1,13 +1,13 @@
-import boto3
 from tabulate import tabulate
+import boto3
 
 # Create a Cost Explorer client
 ce = boto3.client('ce', region_name='us-east-1')
 
 # Set the time period for the query
 time_period = {
-    'Start': '2024-01-01',
-    'End': '2024-01-31'
+    'Start': '2023-12-01',
+    'End': '2023-12-31'
 }
 
 # Set the granularity of the query to MONTHLY
@@ -24,12 +24,25 @@ group_by = [
     }
 ]
 
+# Set the filter to filter aws services
+# Apply line 45 to filter by specific services 
+# filter = {
+#     'Dimensions': {
+#         'Key': 'SERVICE',
+#         'Values': [
+#             'EC2 - Other',
+#             'Amazon Simple Storage Service'
+#         ]
+#     }
+# }
+
 # Call the get_cost_and_usage() method to get the data
 response = ce.get_cost_and_usage(
     TimePeriod=time_period,
     Granularity=granularity,
     Metrics=metrics,
-    GroupBy=group_by
+    GroupBy=group_by,
+    # Filter=filter
 )
 
 # Create a list to store the results
@@ -41,8 +54,4 @@ for result in response['ResultsByTime']:
         costs.append([group['Keys'][0], group['Metrics']['BlendedCost']['Amount']])
 
 # Tabulate the results
-table = tabulate(costs, headers=['Service', 'Cost'], tablefmt='pretty')
-
-# Write the results to a file
-with open('billing_report.txt', 'w') as f:
-    f.write(table)
+print(tabulate(costs, headers=['Service', 'Cost'], tablefmt='pretty'))
