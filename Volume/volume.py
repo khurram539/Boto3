@@ -1,26 +1,33 @@
 import boto3
+from datetime import datetime, timezone
 
-ec2  = boto3.resource('ec2')
+def get_last_attachment_date(volume_id):
+    ec2_client = boto3.client('ec2')
+    response = ec2_client.describe_volumes(VolumeIds=[volume_id])
 
-# Filter to only include volumes that are available
-filters = [{
-    'Name': 'status',
-    'Values': ['available']
-}]
-
-volumes = ec2.volumes.filter(Filters=filters)
-
-# Create a list of tuples containing volume id and detach time
-volume_list = []
-for volume in volumes:
-    if volume.attachments:
-        detach_time = volume.attachments[0]['DetachTime'] if 'DetachTime' in volume.attachments[0] else None
-        volume_list.append((volume.id, detach_time))
+    attachments = response['Volumes'][0]['Attachments']
+    if attachments:
+        last_attachment_time = max(attachment['AttachTime'] for attachment in attachments)
+        return last_attachment_time
     else:
-        volume_list.append((volume.id, None))
+        return None
 
-# Sort the list by detach time
-#volume_list.sort(key=lambda x: x[1])
+def list_volumes():
+    ec2_client = boto3.client('ec2')
+    response = ec2_client.describe_volumes()
 
-for volume_id, detach_time in volume_list:
-    print(volume_id, detach_time if detach_time else 'Never detached')
+    volumes = response['Volumes']
+    for volume in volumes:
+        volume_id = volume['VolumeId']
+        last_attachment_date = get_last_attachment_date(volume_id)
+        
+        if last_attachment_date:
+            last_attachment_date_str = last_attachment_date.strftime('%Y-%m-%d %H:%M:%S %Z')
+        else:
+            last_attachment_date_str = 'Not attached'
+
+        print(f"Volume ID: {volume_id}, Last Attachment Date: {last_attachment_date_str}")
+
+if __name__ == "__main__":
+    list_volumes()
+
