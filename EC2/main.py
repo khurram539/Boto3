@@ -34,7 +34,7 @@ for reservation in response['Reservations']:
             operating_system = 'Unknown'
         
         # Print the instance details        
-        print(f"Instance name: {instance['Tags'][0]['Value']}")
+        print(f"Instance name: {instance['Tags'][0]['Value']}")        
         print(f"Availability Zone: {instance['Placement']['AvailabilityZone']}")
         print(f"Instance State: {instance_state}")
         print(f"Instance Type: {instance_type}")
@@ -45,6 +45,8 @@ for reservation in response['Reservations']:
         print(f"Private IP: {private_ip}")
         print(f"AMI Name:  {ami_name}")        
         print(f"AMI ID: {ami_id}")
+        print(f"Key Pair: {instance.get('KeyName', 'N/A')}")
+        print(f"Security Groups ID: {instance['SecurityGroups'][0]['GroupId']}")
         print("-------------------------------")
              
         
