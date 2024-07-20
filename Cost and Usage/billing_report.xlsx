@@ -1,0 +1,118 @@
++----------------------------------------+---------------+
+|                Service                 |     Cost      |
++----------------------------------------+---------------+
+|             AWS CloudTrail             |   0.039235    |
+|           AWS Cost Explorer            |     0.07      |
+|                AWS Glue                |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |   0.000105    |
+|          AWS Systems Manager           |   0.000312    |
+|           Amazon Comprehend            |       0       |
+|            Amazon DynamoDB             |       0       |
+|              EC2 - Other               | 10.4699587695 |
+| Amazon Elastic Compute Cloud - Compute | 5.7941320201  |
+| Amazon Managed Service for Prometheus  |     29.76     |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0743546509  |
+|      Amazon Virtual Private Cloud      |       0       |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000005    |
+|                 Refund                 |    -29.76     |
+|                  Tax                   |       0       |
+|             AWS CloudTrail             |   0.282247    |
+|           AWS Cost Explorer            |     0.05      |
+|                AWS Glue                |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |   0.000115    |
+|            Amazon DynamoDB             |       0       |
+|              EC2 - Other               | 6.0621685883  |
+| Amazon Elastic Compute Cloud - Compute | 6.5245222089  |
+| Amazon Managed Service for Prometheus  |       0       |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.1471242745  |
+|      Amazon Virtual Private Cloud      |  0.79485695   |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000001    |
+|                  Tax                   |       0       |
+|             AWS CloudTrail             |    1.1074     |
+|           AWS Cost Explorer            |     0.02      |
+|                AWS Glue                |       0       |
+|       AWS Key Management Service       |       0       |
+|               AWS Lambda               |       0       |
+|          AWS Secrets Manager           |   0.000105    |
+|           AWS Step Functions           |       0       |
+|          AWS Systems Manager           |   0.000156    |
+|            Amazon DynamoDB             |       0       |
+|              EC2 - Other               | 8.3830587463  |
+| Amazon Elastic Compute Cloud - Compute | 7.6684696402  |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      |  8.568047454  |
+|      Amazon Virtual Private Cloud      |   1.4935639   |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000002    |
+|                  Tax                   |       0       |
+|             AWS CloudTrail             |   0.3430385   |
+|                AWS Glue                |       0       |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |   0.000085    |
+|          AWS Systems Manager           |   0.000156    |
+|            Amazon DynamoDB             |       0       |
+|              EC2 - Other               | 12.8019968746 |
+| Amazon Elastic Compute Cloud - Compute |  3.16536462   |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.2662163049  |
+|      Amazon Virtual Private Cloud      |  1.35969446   |
+|           Amazon WorkSpaces            | 1.1607310175  |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000008    |
+|                  Tax                   |       0       |
+|             AWS CloudTrail             |   0.0032585   |
+|           AWS Cost Explorer            |     0.02      |
+|                AWS Glue                |  0.47275536   |
+|       AWS Key Management Service       |       0       |
+|          AWS Secrets Manager           |   0.000085    |
+|          AWS Systems Manager           |   0.000234    |
+|            Amazon DynamoDB             |       0       |
+|              EC2 - Other               | 34.8435059223 |
+| Amazon Elastic Compute Cloud - Compute | 4.1366278822  |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0422639993  |
+|      Amazon Virtual Private Cloud      |  0.51040973   |
+|           Amazon WorkSpaces            | 20.117992725  |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |   0.000009    |
+|                  Tax                   |       0       |
+|       AWS Key Management Service       |       0       |
+|               AWS Lambda               |       0       |
+|          AWS Secrets Manager           |    0.00008    |
+|          AWS Systems Manager           |   0.000858    |
+|            Amazon DynamoDB             |       0       |
+|              EC2 - Other               | 10.6275963266 |
+| Amazon Elastic Compute Cloud - Compute | 18.1575727411 |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      | 0.0435386506  |
+|      Amazon Virtual Private Cloud      |  2.21648751   |
+|            AmazonCloudWatch            |       0       |
+|           CloudWatch Events            |    0.00002    |
+|                  Tax                   |       0       |
+|           AWS Data Transfer            | -0.0000003074 |
+|       AWS Key Management Service       |       0       |
+|               AWS Lambda               |       0       |
+|          AWS Secrets Manager           |       0       |
+|          AWS Systems Manager           |       0       |
+|            Amazon DynamoDB             |       0       |
+|              EC2 - Other               | 0.0000003323  |
+| Amazon Elastic Compute Cloud - Compute |       0       |
+|   Amazon Simple Notification Service   |       0       |
+|      Amazon Simple Queue Service       |       0       |
+|     Amazon Simple Storage Service      |  0.000000001  |
+|      Amazon Virtual Private Cloud      |       0       |
+|            AmazonCloudWatch            |       0       |
++----------------------------------------+---------------+
+Total Cost: $167.84
