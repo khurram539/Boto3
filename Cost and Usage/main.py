@@ -24,17 +24,8 @@ group_by = [
     }
 ]
 
-# Set the filter to filter aws services
-# Apply line 45 to filter by specific services 
-# filter = {
-#     'Dimensions': {
-#         'Key': 'SERVICE',
-#         'Values': [
-#             'EC2 - Other',
-#             'Amazon Simple Storage Service'
-#         ]
-#     }
-# }
+# Create a list to store the results
+costs = []
 
 # Call the get_cost_and_usage() method to get the data
 response = ce.get_cost_and_usage(
@@ -45,13 +36,18 @@ response = ce.get_cost_and_usage(
     # Filter=filter
 )
 
-# Create a list to store the results
-costs = []
-
 # Add the results to the list
 for result in response['ResultsByTime']:
     for group in result['Groups']:
         costs.append([group['Keys'][0], group['Metrics']['BlendedCost']['Amount']])
 
+# Initialize total cost
+total_cost = 0.0
+
+# Calculate the total cost
+for cost in costs:
+    total_cost += float(cost[1])
+
 # Tabulate the results
 print(tabulate(costs, headers=['Service', 'Cost'], tablefmt='pretty'))
+print(f"Total Cost: ${total_cost:.2f}")
