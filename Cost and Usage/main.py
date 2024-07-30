@@ -6,7 +6,7 @@ ce = boto3.client('ce', region_name='us-east-1')
 
 # Set the time period for the query
 time_period = {
-    'Start': '2024-01-01',
+    'Start': '2024-07-01',
     'End': '2024-07-31'
 }
 
