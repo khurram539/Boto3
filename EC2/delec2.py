@@ -7,6 +7,6 @@
 
 import boto3
 ec2 = boto3.resource('ec2')
-instance_id = 'i-0ae7c845775dd4229'
+instance_id = 'i-0f605656dbd24ffa8'
 response = ec2.instances.filter(InstanceIds=[instance_id]).terminate()
 print(response)
