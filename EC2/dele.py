@@ -1,12 +1,19 @@
-# import boto3
-# ec2 = boto3.resource('ec2')
-# instance_id = 'i-0ce11afb16ba5ebd8' # replace with your instance ID
-# response = ec2.terminate_instances(InstanceIds=[instance_id])
-# print(response)
-
-
 import boto3
-ec2 = boto3.resource('ec2')
-instance_id = 'i-0f605656dbd24ffa8'
-response = ec2.instances.filter(InstanceIds=[instance_id]).terminate()
+
+# Initialize a session using Amazon EC2
+ec2 = boto3.client('ec2')
+
+# Instance ID
+instance_id = 'i-09a255516077bbd1e'
+
+# Modify the instance attribute to allow termination
+ec2.modify_instance_attribute(
+    InstanceId=instance_id,
+    DisableApiTermination={
+        'Value': False
+    }
+)
+
+# Terminate the instance
+response = ec2.terminate_instances(InstanceIds=[instance_id])
 print(response)
