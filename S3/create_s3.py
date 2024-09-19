@@ -1,4 +1,5 @@
 import boto3
+import subprocess
 from botocore.exceptions import ClientError
 
 def create_bucket(bucket_name, region=None):
@@ -29,7 +30,7 @@ def create_bucket(bucket_name, region=None):
 
 # Example usage
 if __name__ == "__main__":
-    bucket_name = 'aws-163544304364-billing'
+    bucket_name = 'aws-163544304364-this-is-a-test'
     region = 'us-east-1'  # Specify your region
     if create_bucket(bucket_name, region):
         print(f'Bucket {bucket_name} created successfully.')
@@ -37,6 +38,6 @@ if __name__ == "__main__":
         print(f'Failed to create bucket {bucket_name}.')
 
 # To list all the AWS S3 buckets
-import subprocess
+
 subprocess.run(["aws", "s3", "ls"])
 
