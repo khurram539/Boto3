@@ -9,7 +9,7 @@ def create_volume_lifecycle_policy():
     try:
         # Create lifecycle policy
         response = dlm.create_lifecycle_policy(
-            ExecutionRoleArn='arn:aws:iam::163544304364:role/service-role/AWSDataLifecycleManagerDefaultRole',
+            ExecutionRoleArn='arn:aws:iam::0123456789:role/service-role/AWSDataLifecycleManagerDefaultRole',
             Description='30-day backup policy for volumes',
             State='ENABLED',
             PolicyDetails={
