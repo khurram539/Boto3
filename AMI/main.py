@@ -55,8 +55,8 @@ def wait_for_ami(ami_id):
         logger.error(f'Error waiting for AMI: {e}')
 
 # Example usage
-instance_id = 'i-0d7f82dd1e3a960af'
-ami_name = f'Gold_Image {current_date}'
+instance_id = 'i-05f55c2148eb7c5e3'
+ami_name = f'(Ubuntu Desktop {current_date}'
 ami_id = create_ami(instance_id, ami_name)
 
 if ami_id:
