@@ -1,0 +1,38 @@
+{
+    "Description": "Monthly snapshot lifecycle policy for volumes",
+    "State": "ENABLED",
+    "PolicyDetails": {
+        "ResourceTypes": ["VOLUME"],
+        "TargetTags": [
+            {
+                "Key": "Name",
+                "Value": "Webull Document"
+            },
+            {
+                "Key": "Name",
+                "Value": "Root"
+            }
+        ],
+        "Schedules": [
+            {
+                "Name": "MonthlySnapshot",
+                "TagsToAdd": [
+                    {
+                        "Key": "CreatedBy",
+                        "Value": "DLM"
+                    }
+                ],
+                "CreateRule": {
+                    "Times": ["00:00"],
+                    "CronExpression": "cron(0 0 1 * ? *)"
+                },
+                "RetainRule": {
+                    "Count": 12
+                }
+            }
+        ]
+    },
+    "ExecutionRoleArn": "arn:aws:iam::163544304364:role/service-role/AWSDataLifecycleManagerDefaultRole"
+}
+
+### aws dlm create-lifecycle-policy --cli-input-json file://lifecycle-policy.json
