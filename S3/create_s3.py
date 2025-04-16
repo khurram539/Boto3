@@ -30,7 +30,7 @@ def create_bucket(bucket_name, region=None):
 
 # Example usage
 if __name__ == "__main__":
-    bucket_name = 'aws-163544304364-k8s-course'
+    bucket_name = 'kaytheon-cloudtrail'
     region = 'us-east-1'  # Specify your region
     if create_bucket(bucket_name, region):
         print(f'Bucket {bucket_name} created successfully.')
