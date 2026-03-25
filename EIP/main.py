@@ -7,7 +7,7 @@ allocation = ec2.allocate_address(Domain='vpc')
 
 # Attach the EIP to your instance
 response = ec2.associate_address(
-    InstanceId='i-08fcea7ed4cc8609b',  # replace with your instance ID
+    InstanceId='i-05a352937c930c9a5',  # replace with your instance ID
     AllocationId=allocation['AllocationId']
 )
 
