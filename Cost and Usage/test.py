@@ -1,57 +1,74 @@
 from tabulate import tabulate
 import boto3
+from datetime import datetime, timedelta
+import csv
 
-# Create a Cost Explorer client
+# Create Cost Explorer client
 ce = boto3.client('ce', region_name='us-east-1')
 
-# Set the time period for the query
+# Dynamic time range (last 12 months)
+end = datetime.today()
+start = end - timedelta(days=365)
+
 time_period = {
-    'Start': '2025-01-01',
-    'End': '2025-03-31'
+    'Start': start.strftime('%Y-%m-%d'),
+    'End': end.strftime('%Y-%m-%d')
 }
 
-# Set the granularity of the query to MONTHLY
-granularity = 'MONTHLY'
+# Request parameters
+params = {
+    'TimePeriod': time_period,
+    'Granularity': 'MONTHLY',
+    'Metrics': ['UnblendedCost'],
+    'GroupBy': [
+        {
+            'Type': 'DIMENSION',
+            'Key': 'SERVICE'
+        }
+    ]
+}
 
-# Set the metrics to retrieve
-metrics = ['BlendedCost']
+# Store aggregated results
+service_totals = {}
 
-# Set the group by parameter to group by service
-group_by = [
-    {
-        'Type': 'DIMENSION',
-        'Key': 'SERVICE'
-    }
-]
+# Handle pagination
+while True:
+    response = ce.get_cost_and_usage(**params)
 
-# Set the filter to filter aws services
-# Apply line 45 to filter by specific services 
-# filter = {
-#     'Dimensions': {
-#         'Key': 'SERVICE',
-#         'Values': [
-#             'EC2 - Other',
-#             'Amazon Simple Storage Service'
-#         ]
-#     }
-# }
+    for result in response['ResultsByTime']:
+        for group in result['Groups']:
+            service = group['Keys'][0]
+            amount = float(group['Metrics']['UnblendedCost']['Amount'])
 
-# Call the get_cost_and_usage() method to get the data
-response = ce.get_cost_and_usage(
-    TimePeriod=time_period,
-    Granularity=granularity,
-    Metrics=metrics,
-    GroupBy=group_by,
-    # Filter=filter
-)
+            if service not in service_totals:
+                service_totals[service] = 0.0
 
-# Create a list to store the results
-costs = []
+            service_totals[service] += amount
 
-# Add the results to the list
-for result in response['ResultsByTime']:
-    for group in result['Groups']:
-        costs.append([group['Keys'][0], group['Metrics']['BlendedCost']['Amount']])
+    # Check for next page
+    if 'NextPageToken' in response:
+        params['NextPageToken'] = response['NextPageToken']
+    else:
+        break
 
-# Tabulate the results
-print(tabulate(costs, headers=['Service', 'Cost'], tablefmt='pretty'))
+# Convert to table format
+costs = [[service, round(cost, 2)] for service, cost in service_totals.items()]
+
+# Sort by highest cost
+costs.sort(key=lambda x: x[1], reverse=True)
+
+# Calculate total
+total_cost = sum(service_totals.values())
+
+# Print table
+print("\nAWS Cost Breakdown (Last 12 Months):\n")
+print(tabulate(costs, headers=['Service', 'Total Cost ($)'], tablefmt='pretty'))
+print(f"\nTotal Cost: ${total_cost:.2f}")
+
+# OPTIONAL: Export to CSV
+with open('aws_costs.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['Service', 'Total Cost ($)'])
+    writer.writerows(costs)
+
+print("\nCSV exported as aws_costs.csv")
