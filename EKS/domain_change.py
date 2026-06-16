@@ -8,9 +8,9 @@ ec2_client = session.client('ec2')
 
 # Define the private DNS names and their new names
 instances_to_rename = {
-    'ip-192-168-8-100.ec2.internal': 'Worker-Node-1',
-    'ip-192-168-58-189.ec2.internal': 'Worker-Node-2',
-    'ip-192-168-89-131.ec2.internal': 'Worker-Node-3'
+    'ip-172-31-125-251.ec2.internal': 'Worker-Node-1',
+    'ip-172-31-160-161.ec2.internal': 'Worker-Node-2',
+#   'ip-172-31-127-131.ec2.internal': 'Worker-Node-3'
 }
 
 # Iterate over each private DNS name and update the Name tag
