@@ -9,7 +9,9 @@ bucket_names = [
     'aws-163544304364-repo',
     'aws-163544304364-keys',
     'aws-163544304364-billing',
-    'aws-163544304364-devbox'
+    'aws-163544304364-devbox',
+    'aws-163544304364-va-defense-force',
+    'aws-163544304364-ops',
     # Add more bucket names as needed
 ]
 
